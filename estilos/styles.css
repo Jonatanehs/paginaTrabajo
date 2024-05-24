@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Jacquard+12+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Lobster&display=swap');
+header{
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    height: 150px;
+}
+li{
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+#log{
+    background-image: url(../imagenes/arte.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation{
+    position: fixed;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    z-index: 1;
+    background-color: #66666696;
+    transition: .5s;
+}
+
+.navigation ul li{
+    color: #fff;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5em;
+    margin-bottom: 45px;
+    padding: 0px 30px;
+    border-bottom: 1pt solid #252525;
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 5%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #ffffff;
+    width: 100%;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+.hamburger.open #bar1{
+    background-color: #fff;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #fff;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+.tam{
+    margin-top: 125px;
+    font-size: 40px;
+}
+#al{
+    margin-top: 50px;
+    margin-left: 500px;
+}
+#tip{
+    color: white;
+    font-family: "Jacquard 12 Charted", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+#conocenos{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr  1fr 1fr ;
+    margin-left: 155px;
+    margin-right: 155px;
+    margin-top: 55px;
+}
+#parrafo1{ 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-top: 28px;
+    font-size: 25px;
+}
+#imagenuno{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start:1;
+    grid-row-end: 5;
+    margin-top: 155px;
+}
+#title1{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 50px;
+    margin-top: 50px;
+}
+.container {
+    background-color: #000;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 155px;
+    padding-bottom: 155px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+  }
+  .card img {
+    width: 100%;
+    max-height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0; 
+  }
+  .button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .card:nth-child(3n-1),
+  .card:nth-child(3n) {
+    grid-column: span 2;
+  }
+.section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+      color: wheat;
+    }
+.sub{
+    font-size: 32px;
+}
+.txt{
+    font-size: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0px;
+  }
+  .item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; 
+  }
+  .item p {
+    margin-top: 10px;
+  }
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  .item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 200px; 
+    max-width: calc(33.33% - 20px); 
+  }
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; 
+  }
+  .item p {
+    margin-top: 10px;
+  }
+#imag1{
+    background-image: url(../imagenes/carp/art1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag2{
+    background-image: url(../imagenes/carp/art2.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag3{
+    background-image: url(../imagenes/carp/art3.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag4{
+    background-image: url(../imagenes/carp/art4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag5{
+    background-image: url(../imagenes/carp/art5.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag6{
+    background-image: url(../imagenes/carp/art6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag7{
+    background-image: url(../imagenes/carp/art7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag8{
+    background-image: url(../imagenes/carp/art8.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag9{
+    background-image: url(../imagenes/carp/art9.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+#imag10{
+    background-image: url(../imagenes/carp/art10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+.item {
+    position: relative;
+  }
+  
+  .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  .item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  .item:hover::before,
+  .item:hover p {
+    opacity: 1; 
+  }
+  .pa{
+    font-size: 25px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .col{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr  1fr 1fr ;
+    color: #f0f0f0;
+    background-color: #000;
+    padding-bottom: 58px;
+  }
+  .title1{
+    margin-left: 180px;
+  }
+  .image{
+    margin-right: 68px;
+  }
+  
+form {
+    width: 400px;
+    padding: 20px;
+    margin-left: 500px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #letr{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  form label {
+    font-weight: bold;
+  }
+  
+  form input {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  footer{
+    background-color: #592C28;
+    margin-top: 58px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+}
+#re{
+    margin-left: 150px;
+    /* padding-top: 50px; */
+    color: white;
+}
+#redes{
+    margin-left: 550px;
+
+}
+.redes{
+    margin-left: 15px;
+}
+#frm{
+    margin-left: 125px;
+    padding-top: 125px;
+    font-size: 28px;
+}

@@ -429,3 +429,11 @@ form {
     padding-top: 125px;
     font-size: 28px;
 }
+@media (min-width: 300px) and (max-width: 420px) {
+#al{
+  margin-left: 5px;
+}
+#tip{
+  font-size: 45px;
+}
+}

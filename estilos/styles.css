@@ -1,17 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Jacquard+12+Charted&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Lobster&display=swap');
-header{
-    width: 100%;
-    background-color: #000000;
-    display: flex;
-    height: 150px;
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap');
+
+:root
+{
+    --white: #f9f9f9;
+    --green: #229395;
+    --green-light: #7acbcd;
+    --black: #36383F;
+    --grey: #85888C;
 }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 li{
-    display: inline;
+  display: inline;
 }
-a{
+
+main
+{
+    padding: 20px;
+}
+
+a
+{
     text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+}
+.logo{
+    color: white;
+    font-family: "Jacquard 12 Charted", system-ui;
+    font-style: normal;
+}
+
+.header
+{
+    background-color: black;
+    box-shadow: 1px 1px 5px 0px var(--grey);
+    height: 125px;
+    top: 0;
+    width: 100%;
+}
+
+.logo
+{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 110px;
+    margin-top: 40px;
+}
+
+.nav
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    margin-top: 20px;
+    margin-right: 120px;
+}
+
+.menu a
+{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover
+{
+    background-color: var(--green-light);
+}
+
+.hamb
+{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line 
+{
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after
+{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before
+{
+    top: 5px;
+}
+
+.hamb-line::after
+{
+    top: -5px;
+}
+
+.side-menu 
+{
+    display: none;
+}
+
+.side-menu:checked ~ nav
+{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line 
+{
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before 
+{
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after 
+{
+    transform: rotate(45deg);
+    top:0;
 }
 #log{
     background-image: url(../imagenes/arte.jpg);
@@ -21,94 +159,14 @@ a{
     height: 600px;
 }
 
-a,button{
-    cursor: pointer;
-}
 
-nav{
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    width: 250px;
-}
-
-.navigation{
-    position: fixed;
-    right: -350px;
-    width: 350px;
-    height: 100%;
-    z-index: 1;
-    background-color: #66666696;
-    transition: .5s;
-}
-
-.navigation ul li{
-    color: #fff;
-    display: block;
-    text-align: right;
-    text-transform: uppercase;
-    list-style-type: none;
-    font-size: 1.5em;
-    margin-bottom: 45px;
-    padding: 0px 30px;
-    border-bottom: 1pt solid #252525;
-}
-
-.hamburger, .bar{
-    position: fixed;
-}
-
-.hamburger{
-    display: block;
-    top: 5%;
-    left: 95%;
-    width: 30px;
-    height: 30px;
-    transform: translateY(-50%);
-    border: 0;
-    background: 0 0;
-}
-
-.bar{
-    top: 3px;
-    background: #ffffff;
-    width: 100%;
-    height: 4px;
-    transition: all .3s ease-in;
-}
-
-#bar2{
-    top: 11px;
-}
-
-#bar3{
-    top: 19px;
-}
-
-.navigation.active{
-    right: 0;
-}
-
-.hamburger.open #bar1{
-    background-color: #fff;
-    transform: rotate(45deg) translate(6px, 5px);
-}
-
-.hamburger.open #bar2{
-    background-color: transparent;
-}
-
-.hamburger.open #bar3{
-    background-color: #fff;
-    transform: rotate(-45deg) translate(6px, -5px);
-}
 .tam{
     margin-top: 125px;
     font-size: 40px;
 }
 #al{
     margin-top: 50px;
-    margin-left: 500px;
+    margin-left: 150px;
 }
 #tip{
     color: white;
@@ -444,25 +502,24 @@ form {
     padding-top: 125px;
     font-size: 28px;
 }
-@media (min-width: 300px) and (max-width: 420px) {
+@media (min-width: 280px) and (max-width: 490px) {
+  
 #al{
   margin-top: 28px;
   margin-left: 5px;
 }
-#tip{
-  font-size: 45px;
+.logo{
+  margin-left: 30px;
+  font-size: 40px;
 }
-.hamburger{
-  top: 17%;
-  left: 35%;
-}
+
 #imagenuno{
   grid-column-start: 0;
     grid-column-end: 1;
     grid-row-start:0;
     grid-row-end: 2;
     margin-top: 155px;
-    margin-left: 20px;
+    margin-left: 40px;
     height: 250px;
     width: 260px;
 }
@@ -471,14 +528,14 @@ form {
     grid-column-end: 5;
     grid-row-start:4;
     grid-row-end: 2;
-    margin-left: 15px;
+    margin-left: 30px;
 }
 #parrafo1{
   grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start:8;
     grid-row-end: 10;
-    margin-left: 15px;
+    margin-left: 35px;
 }
 #conocenos{
   margin-left: 0px;
@@ -488,7 +545,7 @@ form {
   grid-template-columns: repeat(1, 1fr);
 }
 .item{
-  padding: 120px;
+  padding: 170px;
 }
 #title2{
   grid-column-start: 1;
@@ -506,14 +563,14 @@ form {
     margin-left: 25px;
 }
 #frm{
-  margin-left: 35px;
+  margin-left: 20px;
   padding-top: 125px;
   font-size: 28px;
 }
 form {
-  width: 240px;
+  width: 300px;
   padding: 30px;
-  margin-left: 0px;
+  margin-left: 15px;
   margin-top: 150px;
   margin-bottom: 50px;
   background-color: #592C28;
@@ -534,4 +591,284 @@ form {
 footer{
   display: block;
 }
+}
+@media (min-width: 491px) and (max-width: 570px) {
+  .logo{
+    margin-left: 40px;
+    font-size: 50px;
+  }
+  #al{
+    margin-top: 38px;
+    margin-left: 35px;
+  }
+  #tip{
+    font-size: 65px;
+  }
+ 
+  #imagenuno{
+    grid-column-start: 0;
+      grid-column-end: 1;
+      grid-row-start:0;
+      grid-row-end: 2;
+      margin-top: 155px;
+      margin-left: 80px;
+      height: 350px;
+      width: 350px;
+  }
+  #title1{
+    grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start:4;
+      grid-row-end: 2;
+      margin-left: 85px;
+  }
+  #parrafo1{
+    grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start:8;
+      grid-row-end: 10;
+      margin-left: 85px;
+  }
+  #conocenos{
+    margin-left: 0px;
+  }
+  .container {
+    padding-left: 50px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item{
+    padding: 255px;
+  }
+  #title2{
+    grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start:4;
+      grid-row-end: 2;
+      margin-left: 50px;
+      font-size: 47px;
+  }
+  #parrafo2{
+    grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start:8;
+      grid-row-end: 10;
+      margin-left: 50px;
+  }
+  #frm{
+    margin-left: 35px;
+    padding-top: 125px;
+    font-size: 30px;
+  }
+  form {
+    width: 380px;
+    padding: 30px;
+    margin-left: 80px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    background-color: #592C28;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #re{
+    margin-left: 110px;
+    font-size: 15px;
+  }
+  #redes{
+    margin-left: 110px;
+  }
+  .redes{
+    margin-top: 20px;
+  }
+  footer{
+    display: block;
+  }
+}
+/* @media  (min-width: 891px){
+  header{
+    width: 1050px;
+    background-color: #000000;
+    display: flex;
+    height: 180px;
+}
+#al{
+  margin-top: 38px;
+  margin-left: 255px;
+}
+#tip{
+  font-size: 95px;
+}
+#log{
+  background-image: url(../imagenes/arte.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 1050px;
+  height: 600px;
+}
+
+#imagenuno{
+  grid-row-start:3;
+  grid-row-end: 3;
+  height: 400px;
+  width: 400px;
+}
+#title1{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  font-size: 70px;
+}
+#parrafo1{
+  grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end: 10;
+    margin-left: 50px;
+    font-size: 40px;
+}
+#conocenos{
+  margin-left: 50px;
+  margin-right: 0px;
+}
+.container {
+  width: 800px;
+  padding-left: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-container{
+  width: 1050px;
+}
+.sub{
+  font-size: 45px;
+}
+.txt{
+  font-size: 32px;
+}
+.button{
+  font-size: 35px;
+}
+.item{
+  padding: 150px;
+}
+#title2{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  font-size: 70px;
+}
+.col{
+  width: 1050px;
+}
+.pa{
+  font-size: 70px;
+}
+#parrafo2{
+  grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end: 10;
+    margin-left: 50px;
+    font-size: 40px;
+}
+#frm{
+  margin-left: 35px;
+  padding-top: 125px;
+  font-size: 50px;
+}
+form {
+  width: 640px;
+  padding: 80px;
+  margin-left: 150px;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  background-color: #592C28;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#letr{
+  font-size: 38px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+form input {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 30px 20px;
+  font-size: 26px;
+}
+#re{
+  margin-left: 210px;
+  font-size: 35px;
+}
+#redes{
+  margin-left: 200px;
+}
+.redes{
+  margin-top: 30px;
+  
+}
+.section-title{
+  font-size: 60px;
+}
+#fecha_exposicion{
+  font-size: 25px;
+}
+footer{
+  width: 1050px;
+  display: block;
+}
+#wa{
+  height: 60px;
+  width: 60px;
+}
+#insta{
+  height: 60px;
+  width: 60px;
+}
+#face{
+  height: 60px;
+  width: 60px;
+}
+#redes{
+  height: 60px;
+  width: 60px;
+}
+} */
+@media (min-width: 768px)
+{
+    .nav
+    {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li
+    {
+        float: left;
+    }
+
+    .menu a:hover
+    {
+        background-color: transparent;
+        color: var(--green-light)
+    }
+
+    .hamb
+    {
+        display: none;
+    }
 }

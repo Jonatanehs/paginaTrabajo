@@ -358,9 +358,24 @@ nav{
     background-color: #000;
     padding-bottom: 58px;
   }
-  .title1{
-    margin-left: 180px;
-  }
+  #parrafo2{ 
+    margin-left: 150px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-top: 28px;
+    font-size: 25px;
+}
+
+#title2{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 150px;
+}
   .image{
     margin-right: 68px;
   }
@@ -431,9 +446,92 @@ form {
 }
 @media (min-width: 300px) and (max-width: 420px) {
 #al{
+  margin-top: 28px;
   margin-left: 5px;
 }
 #tip{
   font-size: 45px;
+}
+.hamburger{
+  top: 17%;
+  left: 35%;
+}
+#imagenuno{
+  grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start:0;
+    grid-row-end: 2;
+    margin-top: 155px;
+    margin-left: 20px;
+    height: 250px;
+    width: 260px;
+}
+#title1{
+  grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:4;
+    grid-row-end: 2;
+    margin-left: 15px;
+}
+#parrafo1{
+  grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:8;
+    grid-row-end: 10;
+    margin-left: 15px;
+}
+#conocenos{
+  margin-left: 0px;
+}
+.container {
+  padding-left: 50px;
+  grid-template-columns: repeat(1, 1fr);
+}
+.item{
+  padding: 120px;
+}
+#title2{
+  grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:4;
+    grid-row-end: 2;
+    margin-left: 25px;
+    font-size: 45px;
+}
+#parrafo2{
+  grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:8;
+    grid-row-end: 10;
+    margin-left: 25px;
+}
+#frm{
+  margin-left: 35px;
+  padding-top: 125px;
+  font-size: 28px;
+}
+form {
+  width: 240px;
+  padding: 30px;
+  margin-left: 0px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  background-color: #592C28;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#re{
+  margin-left: 10px;
+  font-size: 15px;
+}
+#redes{
+  margin-left: 15px;
+}
+.redes{
+  margin-top: 20px;
+}
+footer{
+  display: block;
 }
 }

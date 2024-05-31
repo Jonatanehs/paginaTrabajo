@@ -2,20 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap');
 
-:root {
-    --white: #f9f9f9;
-    --green: #229395;
-    --green-light: #7acbcd;
-    --black: #36383F;
-    --grey: #85888C;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 li {
     display: inline;
 }
@@ -32,116 +18,33 @@ ul {
     list-style: none;
 }
 
-.logo {
-    color: white;
-    font-family: "Jacquard 12 Charted", system-ui;
-    font-style: normal;
-}
-
-.header {
-    background-color: black;
-    box-shadow: 1px 1px 5px 0px var(--grey);
-    height: 125px;
-    width: 100%;
-    position: relative; /* Añadimos posición relativa */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #000000;
 }
 
 .logo {
-    display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 110px;
-    margin-top: 40px;
+  margin-top: 20px;
+  max-width: 15rem;
 }
 
-.nav {
-    position: absolute; 
-    top: 80%; 
-    left: 0;
-    width: 100%;
-    height: 495px;
-    background-color: black;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .5s ease-out;
-    margin-top: 20px;
-    margin-right: 120px;
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
+.nav-list li a {
+  text-decoration: none;
+  color: #1c1c1c;
 }
 
-.menu li {
-    display: block;
-    margin-top: 60px; 
-    margin-left: 50px;
-}
-
-.menu a {
-    padding: 20px;
-    color: var(--white);
-    font-size: 24px; 
-}
-
-.menu a:hover {
-    background-color: var(--green-light);
-}
-
-.hamb {
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-}
-
-.hamb-line::before,
-.hamb-line::after {
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.hamb-line::before {
-    top: 5px;
-}
-
-.hamb-line::after {
-    top: -5px;
-}
-
-.side-menu {
-    display: none;
-}
-
-.side-menu:checked ~ .nav {
-    max-height: 100vh; 
-}
-
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top: 0;
+.abrir-menu,
+.cerrar-menu {
+  display: none;
 }
 
 #log{
@@ -157,10 +60,7 @@ ul {
     margin-top: 125px;
     font-size: 40px;
 }
-#al{
-    margin-top: 50px;
-    margin-left: 150px;
-}
+
 #tip{
     color: white;
     font-family: "Jacquard 12 Charted", system-ui;
@@ -553,13 +453,54 @@ form {
     margin-left: 0px;
     width: 290px;
   }
-#al{
-  margin-top: 28px;
-  margin-left: 5px;
+
+.abrir-menu,
+.cerrar-menu {
+  margin-top: 20px;
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
 }
-.logo{
-  margin-left: 30px;
-  font-size: 40px;
+
+.abrir-menu {
+    color: #1c1c1c;
+    
+}
+
+.cerrar-menu {
+    color: #ececec;
+}
+
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    /* box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); */
+}
+
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list {
+    flex-direction: column;
+    align-items: end;
+}
+
+.nav-list li a {
+    color: #ecececec;
 }
 
 #imagenuno{
@@ -594,7 +535,7 @@ form {
   grid-template-columns: repeat(1, 1fr);
 }
 .item{
-  padding: 225px;
+  padding: 145px;
 }
 #title2{
   grid-column-start: 1;
@@ -659,10 +600,7 @@ footer{
   .card2 {
     width: 45%;
   }
-  #al{
-    margin-top: 38px;
-    margin-left: 35px;
-  }
+  
   #tip{
     font-size: 65px;
   }
@@ -765,7 +703,7 @@ footer{
     display: flex;
     height: 180px;
 }
-#al{
+{
   margin-top: 38px;
   margin-left: 255px;
 }
